@@ -1,5 +1,6 @@
 package com.adega.api.domain.cliente;
 
+import com.adega.api.domain.cliente.dto.DadosAtualizarCliente;
 import com.adega.api.domain.cliente.dto.DadosCliente;
 import jakarta.persistence.*;
 import lombok.*;
@@ -26,5 +27,16 @@ public class Cliente {
         this.nome = cliente.nome();
         this.cpf = cliente.cpf();
         this.telefone =cliente.telefone();
+    }
+
+    public void atualizar(DadosAtualizarCliente atualizarCliente) {
+        if(atualizarCliente.name() != null||atualizarCliente.name().length()>1){
+            this.nome = atualizarCliente.name();
+
+        }
+        if(atualizarCliente.telefone() != null||atualizarCliente.telefone().length()>1){
+            this.telefone = atualizarCliente.telefone();
+
+        }
     }
 }
