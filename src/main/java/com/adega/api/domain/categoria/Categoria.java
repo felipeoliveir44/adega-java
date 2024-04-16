@@ -1,6 +1,6 @@
-package com.adega.api.categoria;
+package com.adega.api.domain.categoria;
 
-import com.adega.api.categoria.model.NameCategoria;
+import com.adega.api.domain.categoria.model.NameCategoria;
 import jakarta.persistence.*;
 import lombok.*;
 

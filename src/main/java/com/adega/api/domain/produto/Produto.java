@@ -1,11 +1,10 @@
-package com.adega.api.produto;
+package com.adega.api.domain.produto;
 
-import com.adega.api.categoria.Categoria;
+import com.adega.api.domain.categoria.Categoria;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 
 @Entity
 @Table(name = "tbproduto")

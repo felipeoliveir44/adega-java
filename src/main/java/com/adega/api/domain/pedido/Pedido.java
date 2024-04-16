@@ -1,7 +1,7 @@
-package com.adega.api.pedido;
+package com.adega.api.domain.pedido;
 
-import com.adega.api.cliente.Cliente;
-import com.adega.api.produto.Produto;
+import com.adega.api.domain.cliente.Cliente;
+import com.adega.api.domain.produto.Produto;
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -1,4 +1,4 @@
-package com.adega.api.funcionario;
+package com.adega.api.domain.funcionario;
 
 import jakarta.persistence.*;
 import lombok.*;

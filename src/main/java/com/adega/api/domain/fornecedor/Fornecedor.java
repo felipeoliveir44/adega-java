@@ -1,23 +1,25 @@
-package com.adega.api.cliente;
+package com.adega.api.domain.fornecedor;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "tbcliente")
+@Table(name = "tbfornecedor")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode(of = "id")
-public class Cliente {
+public class Fornecedor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name ="nome")
     private String nome;
-    @Column(name = "cpf")
-    private String cpf;
+    @Column(name = "email")
+    private String email;
+    @Column(name = "endereco")
+    private String endereco;
     @Column(name = "telefone")
     private String telefone;
 }
