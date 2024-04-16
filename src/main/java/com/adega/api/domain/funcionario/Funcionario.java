@@ -1,5 +1,7 @@
 package com.adega.api.domain.funcionario;
 
+import com.adega.api.domain.funcionario.dto.DadosAtualizarFuncionario;
+import com.adega.api.domain.funcionario.dto.DadosCadastrarFuncionario;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -32,24 +34,43 @@ public class Funcionario {
     @Column(name = "data_nascimento")
     private LocalDate dataNascimento;
     @Column(name = "role")
-    private String role;
+    @Enumerated(EnumType.STRING)
+    private Role role;
     @Column(name = "status")
     private Boolean status;
-    /*
-    id bigint auto_increment primary key not null,
-    nome varchar (100) not null,
-    email varchar (100) not null unique,
-    senha varchar (20) not null,
-    telefone varchar (15) not null unique,
-    rg varchar (12) not null unique,
-    cpf varchar (15) not null unique,
-    data_contratacao date not null,
-    data_nascimento date not null,
-    role varchar (20) not null,
-    status tinyint not null
 
-     */
+    public Funcionario(DadosCadastrarFuncionario dados) {
+        this.nome = dados.nome();
+        this.email = dados.email();
+        this.senha = dados.senha();
+        this.telefone = dados.telefone();
+        this.rg = dados.rg();
+        this.cpf = dados.cpf();
+        this.dataContratacao = dados.dataContratacao();
+        this.dataNascimento = dados.dataNascimento();
+        this.role = dados.role();
+        this.status = true;
+    }
     public void desativaFuncionario(){
         this.status = false;
+    }
+    public void atualizarInformacoes(DadosAtualizarFuncionario dados) {
+        if (dados.nome() != null) {
+            this.nome = dados.nome();
+        }
+
+        if (dados.email() != null) {
+            this.email = dados.email();
+        }
+        if (dados.senha() != null) {
+            this.senha = dados.senha();
+        }
+        if (dados.telefone() != null) {
+            this.telefone = dados.telefone();
+        }
+    }
+
+    public void ativarFuncionario() {
+        this.status = true;
     }
 }
