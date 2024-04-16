@@ -14,7 +14,7 @@ import java.time.LocalDate;
 public class Funcionario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     @Column(name ="nome")
     private String nome;
     @Column(name = "email")
@@ -34,7 +34,7 @@ public class Funcionario {
     @Column(name = "role")
     private String role;
     @Column(name = "status")
-    private boolean status;
+    private Boolean status;
     /*
     id bigint auto_increment primary key not null,
     nome varchar (100) not null,

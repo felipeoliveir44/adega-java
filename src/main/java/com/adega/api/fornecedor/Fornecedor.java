@@ -13,7 +13,7 @@ import lombok.*;
 public class Fornecedor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     @Column(name ="nome")
     private String nome;
     @Column(name = "email")

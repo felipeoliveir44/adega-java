@@ -1,5 +1,6 @@
 package com.adega.api.produto;
 
+import com.adega.api.categoria.Categoria;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -16,7 +17,7 @@ import java.math.BigInteger;
 public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     @Column(name ="nome")
     private String nome;
     @Column(name = "quantidade")
@@ -25,5 +26,5 @@ public class Produto {
     private BigDecimal preco;
     @ManyToOne
     @JoinColumn(name = "id_categoria")
-    private BigInteger idCatagoria;
+    private Categoria idCatagoria;
 }

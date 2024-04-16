@@ -17,7 +17,7 @@ import java.math.BigDecimal;
 public class Pedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     @Column(name = "quantidade")
     private int quantidade;
     @Column(name = "preco_produto")
