@@ -1,4 +1,4 @@
-package com.adega.api.domain.categoria.model;
+package com.adega.api.domain.categoria.dto;
 
 public enum NameCategoria {
     NADA,
