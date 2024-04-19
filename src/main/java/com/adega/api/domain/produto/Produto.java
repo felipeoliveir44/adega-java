@@ -1,6 +1,8 @@
 package com.adega.api.domain.produto;
 
 import com.adega.api.domain.categoria.Categoria;
+import com.adega.api.domain.produto.dto.DadosAtualizarProduto;
+import com.adega.api.domain.produto.dto.DadosCadastroProduto;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,10 +22,38 @@ public class Produto {
     @Column(name ="nome")
     private String nome;
     @Column(name = "quantidade")
-    private int quantidade;
+    private Integer quantidade;
     @Column(name = "preco")
     private BigDecimal preco;
     @ManyToOne
     @JoinColumn(name = "id_categoria")
     private Categoria idCatagoria;
+
+    public Produto(DadosCadastroProduto dadosCadastroProduto, Categoria categoria) {
+        this.nome = dadosCadastroProduto.nome();
+        this.quantidade = dadosCadastroProduto.quantidade();
+        this.preco = dadosCadastroProduto.preco();
+        this.idCatagoria = categoria;
+    }
+
+    public void atualizar(DadosAtualizarProduto atualizarProduto,Categoria categoria) {
+
+        if(atualizarProduto.idCategoria() != null){
+            this.idCatagoria = categoria;
+
+        }
+        if(atualizarProduto.preco() != null){
+            this.preco = atualizarProduto.preco();
+
+        }
+        if(atualizarProduto.nome() != null){
+            this.nome = atualizarProduto.nome();
+
+        }
+        if(atualizarProduto.quantidade() != null){
+            this.quantidade = atualizarProduto.quantidade();
+
+        }
+
+    }
 }
