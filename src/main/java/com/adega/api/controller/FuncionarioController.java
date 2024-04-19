@@ -1,20 +1,17 @@
 package com.adega.api.controller;
-import com.adega.api.domain.funcionario.Funcionario;
 
-public class FuncionarioController {
 import com.adega.api.domain.funcionario.dto.DadosAtualizarFuncionario;
 import com.adega.api.domain.funcionario.dto.DadosCadastrarFuncionario;
 import com.adega.api.domain.funcionario.dto.DadosListagemFuncionario;
 import com.adega.api.service.funcionario.FuncionarioService;
+import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
-
 @RestController
 @RequestMapping("/funcionario")
 public class FuncionarioController {

@@ -4,6 +4,7 @@ import com.adega.api.domain.categoria.dto.DadosCategoria;
 import com.adega.api.domain.categoria.dto.DadosListaCategoria;
 import com.adega.api.service.categoria.CategoriaService;
 import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -19,7 +20,7 @@ public class CategoriaController {
 
     @PostMapping("/cadastra")
     @Transactional
-    public ResponseEntity<DadosCategoria> cadastro (@RequestBody DadosCategoria categoria){
+    public ResponseEntity<DadosCategoria> cadastro (@RequestBody  @Valid  DadosCategoria categoria){
         return categoriaService.cadastra(categoria);
 
     }

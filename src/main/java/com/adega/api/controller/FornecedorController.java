@@ -7,6 +7,7 @@ import com.adega.api.domain.fornecedor.dto.DadosList;
 import com.adega.api.domain.fornecedor.dto.DadosListFornecedor;
 import com.adega.api.service.fornecedor.FornecedorService;
 import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 import org.springframework.data.domain.Page;
@@ -23,7 +24,7 @@ public class FornecedorController {
 
     @PostMapping("/cadastra")
     @Transactional
-    public ResponseEntity<DadosFornecedorCadastro> cadastra(@RequestBody DadosFornecedorCadastro dados){
+    public ResponseEntity<DadosFornecedorCadastro> cadastra(@RequestBody  @Valid DadosFornecedorCadastro dados){
 
         return fornecedorService.cadastraFornecedor(dados);
 

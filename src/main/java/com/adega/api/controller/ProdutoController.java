@@ -5,6 +5,7 @@ import com.adega.api.domain.produto.dto.DadosCadastroProduto;
 import com.adega.api.domain.produto.dto.DadosListProduto;
 import com.adega.api.service.produto.ProdutoService;
 import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 import org.springframework.data.domain.Page;
@@ -21,7 +22,7 @@ public class ProdutoController {
 
     @PostMapping("/cadastra")
     @Transactional
-    public ResponseEntity<DadosCadastroProduto> cadastro(@RequestBody DadosCadastroProduto dadosCadastroProduto){
+    public ResponseEntity<DadosCadastroProduto> cadastro(@RequestBody  @Valid DadosCadastroProduto dadosCadastroProduto){
         return produtoService.cadastroProduto(dadosCadastroProduto);
 
     }
