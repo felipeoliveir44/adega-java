@@ -1,5 +1,7 @@
 package com.adega.api.domain.fornecedor;
 
+import com.adega.api.domain.fornecedor.dto.DadosFornecedorAtualizar;
+import com.adega.api.domain.fornecedor.dto.DadosFornecedorCadastro;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,4 +24,27 @@ public class Fornecedor {
     private String endereco;
     @Column(name = "telefone")
     private String telefone;
+
+    public Fornecedor(DadosFornecedorCadastro dados) {
+        this.nome= dados.nome();
+        this.email =dados.email();
+        this.endereco = dados.endereco();
+        this.telefone = dados.telefone();
+    }
+
+    public void atualizarInfos(DadosFornecedorAtualizar atualizar) {
+        if(atualizar.email() != null){
+            this.email = atualizar.email() ;
+
+        }
+        if(atualizar.telefone() != null){
+            this.telefone = atualizar.telefone();
+
+        }
+        if(atualizar.endereco() != null){
+            this.endereco = atualizar.endereco();
+
+        }
+
+    }
 }

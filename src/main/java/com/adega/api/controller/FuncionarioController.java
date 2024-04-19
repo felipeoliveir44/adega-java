@@ -1,5 +1,7 @@
 package com.adega.api.controller;
+import com.adega.api.domain.funcionario.Funcionario;
 
+public class FuncionarioController {
 import com.adega.api.domain.funcionario.dto.DadosAtualizarFuncionario;
 import com.adega.api.domain.funcionario.dto.DadosCadastrarFuncionario;
 import com.adega.api.domain.funcionario.dto.DadosListagemFuncionario;
