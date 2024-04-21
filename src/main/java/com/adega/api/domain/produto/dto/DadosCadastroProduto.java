@@ -8,13 +8,10 @@ public record DadosCadastroProduto(
         @NotBlank
         String nome,
         @NotBlank
-
         Integer quantidade,
         @NotBlank
-
         BigDecimal preco,
         @NotBlank
-
         Long idCategoria
 
 
