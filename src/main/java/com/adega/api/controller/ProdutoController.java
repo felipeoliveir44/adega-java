@@ -31,10 +31,7 @@ public class ProdutoController {
     public Page<DadosListProduto> listProdutos(@PageableDefault(size = 10,sort = {"preco"}) Pageable pageable, @RequestBody DadosListProduto dados){
 
         return produtoService.listProduto(pageable,dados);
-
-
     }
-
 
     @PutMapping("/atualizar/{id}")
     @Transactional
@@ -42,8 +39,4 @@ public class ProdutoController {
         return produtoService.atualizarProduto(id ,atualizarProduto);
 
     }
-
-
-
-
 }

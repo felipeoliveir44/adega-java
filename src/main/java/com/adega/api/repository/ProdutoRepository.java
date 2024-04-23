@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Optional;
 
 public interface ProdutoRepository extends JpaRepository<Produto,Long> {
@@ -17,4 +18,6 @@ public interface ProdutoRepository extends JpaRepository<Produto,Long> {
     Page<Produto> findByPrecoGreaterThanEqual(BigDecimal preco, Pageable pageable);
 
     Page<Produto> findByQuantidadeGreaterThanEqual(Integer quantidade, Pageable pageable);
+
+    List<Produto> findQuantidadeById(Long id);
 }
