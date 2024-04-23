@@ -1,4 +1,10 @@
 package com.adega.api.domain.gestao.dto;
 
-public record Despesa() {
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+public interface Despesa {
+    LocalDate getData();
+
+    BigDecimal getTotal();
 }

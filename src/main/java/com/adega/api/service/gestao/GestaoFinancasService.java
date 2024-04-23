@@ -1,11 +1,13 @@
 package com.adega.api.service.gestao;
 
 import com.adega.api.domain.gestao.GestaoFinancas;
-import com.adega.api.domain.gestao.dto.DadosGestaoFinancas;
+import com.adega.api.domain.gestao.dto.*;
 import com.adega.api.repository.GestaoFinaceiraRepository;
-import com.adega.api.domain.gestao.dto.RelatorioGestao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class GestaoFinancasService {
@@ -15,7 +17,19 @@ public class GestaoFinancasService {
         repository.save(new GestaoFinancas(financas));
     }
 
-    public RelatorioGestao listGestao(){
-        return null;
+
+    public <T> T listGestao(DadosGestao infos) {
+        List<Transacoes> transacoes = repository.findAll().stream().map(Transacoes::new).toList();
+        //return (T) new RelatorioGestao(transacoes, repository.DESPESA(), repository.RECEITA());
+        if(CategoriaFinacas.RECEITA.equals(infos.finacas())){
+            return (T)  repository.RECEITA();
+        }else if(CategoriaFinacas.DESPESA.equals(infos.finacas())){
+            return (T)  repository.DESPESA();
+        }else{
+            return (T) new RelatorioGestao(transacoes, repository.DESPESA(), repository.RECEITA());
+        }
+
+      
+
     }
 }
