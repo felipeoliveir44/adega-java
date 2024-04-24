@@ -9,8 +9,6 @@ public record DadosListProduto(
         Integer quantidade,
         BigDecimal preco,
         Long id
-
-
 ) {
     public DadosListProduto(Produto produto){
         this(produto.getNome(), produto.getQuantidade(), produto.getPreco(), produto.getId());

@@ -1,20 +1,18 @@
 package com.adega.api.domain.produto.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
 
 public record DadosCadastroProduto(
         @NotBlank
         String nome,
-        @NotBlank
+        @NotNull
         Integer quantidade,
-        @NotBlank
+        @NotNull
         BigDecimal preco,
-        @NotBlank
+        @NotNull
         Long idCategoria
-
-
-
 ) {
 }

@@ -46,7 +46,6 @@ public class ProdutoService {
             return produtoRepository.findByQuantidadeGreaterThanEqual(dados.quantidade(),pageable).map(DadosListProduto::new);
         }else{
             return produtoRepository.findAll(pageable).map(DadosListProduto::new);
-
         }
 
     }

@@ -29,7 +29,6 @@ public class ProdutoController {
 
     @GetMapping("/listar")
     public Page<DadosListProduto> listProdutos(@PageableDefault(size = 10,sort = {"preco"}) Pageable pageable, @RequestBody DadosListProduto dados){
-
         return produtoService.listProduto(pageable,dados);
     }
 
