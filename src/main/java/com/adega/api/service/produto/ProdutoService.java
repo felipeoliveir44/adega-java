@@ -1,6 +1,7 @@
 package com.adega.api.service.produto;
 
 import com.adega.api.domain.categoria.Categoria;
+import com.adega.api.domain.pedido.dto.DadosRealizarPedido;
 import com.adega.api.domain.produto.Produto;
 import com.adega.api.domain.produto.dto.DadosAtualizarProduto;
 import com.adega.api.domain.produto.dto.DadosCadastroProduto;
@@ -67,5 +68,24 @@ public class ProdutoService {
         }
     }
 
+    public void retirarQuantidadeProduto(DadosRealizarPedido dados) {
+        // Recuperar quantidade
+        Optional<Produto> optionalProduto = produtoRepository.findById(dados.idProduto());
+        Integer quantidadeRetirada = dados.quantidade();
+
+        if (optionalProduto.isPresent()) {
+            Produto produto = optionalProduto.get();
+            Integer quantidadeAtual = produto.getQuantidade();
+
+            if (quantidadeAtual >= quantidadeRetirada) {
+                produto.setQuantidade(quantidadeAtual - quantidadeRetirada);
+                produtoRepository.save(produto);
+            } else {
+                System.out.println("Não há estoque suficiente para retirar a quantidade solicitada.");
+            }
+        } else {
+            System.out.println("Produto não encontrado com o ID especificado.");
+        }
+    }
 
 }

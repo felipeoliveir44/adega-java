@@ -4,6 +4,7 @@ import com.adega.api.domain.cliente.Cliente;
 import com.adega.api.domain.cliente.dto.DadosAtualizarCliente;
 import com.adega.api.domain.cliente.dto.DadosCliente;
 import com.adega.api.domain.cliente.dto.DadosListCliente;
+import com.adega.api.domain.pedido.dto.DadosRealizarPedido;
 import com.adega.api.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -23,7 +24,11 @@ public class ClienteService {
         clienteRepository.save(cliente);
         return ResponseEntity.ok().body(dados);
     }
-
+    public Cliente cadastrarCliente(DadosRealizarPedido cliente) {
+        var criarCliente = new Cliente(cliente);
+        clienteRepository.save(criarCliente);
+        return criarCliente;
+    }
     public Page<DadosListCliente> listar(Pageable paginacao) {
         return clienteRepository.findAll(paginacao).map(DadosListCliente::new);
     }
