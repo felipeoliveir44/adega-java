@@ -4,7 +4,7 @@ import java.util.List;
 
 public record RelatorioGestao(
         List<Transacoes> transacoesList,
-        Despesa despesatotal,
-        Receita receitatotal
+        List<Despesa> despesatotal,
+        List<Receita> receitatotal
 ) {
 }

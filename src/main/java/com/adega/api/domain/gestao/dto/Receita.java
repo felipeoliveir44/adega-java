@@ -1,4 +1,10 @@
 package com.adega.api.domain.gestao.dto;
 
-public record Receita() {
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+public interface Receita {
+   LocalDate getData();
+
+   BigDecimal getTotal();
 }
