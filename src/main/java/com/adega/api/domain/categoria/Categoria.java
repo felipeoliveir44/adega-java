@@ -1,6 +1,6 @@
 package com.adega.api.domain.categoria;
 
-import com.adega.api.domain.categoria.model.NameCategoria;
+import com.adega.api.domain.categoria.dto.DadosCategoria;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -15,7 +15,10 @@ public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Enumerated(EnumType.STRING)
-    @Column(name = "nome")
-    private NameCategoria categoria;
+    @Column(name = "nome",unique = true)
+    private String categoria;
+
+    public Categoria(DadosCategoria dadosCategoria) {
+        this.categoria = dadosCategoria.nome().toUpperCase();
+    }
 }
