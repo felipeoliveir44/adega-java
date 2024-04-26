@@ -21,23 +21,15 @@ public class GestaoFinancasController {
         service.cadastro(financas);
     }
     @GetMapping
-    public List<Transacoes> listDispesaGanho(@RequestBody DadosListGanhoDispesa date){
+    public RelatorioGestao listDispesaGanho(@RequestBody DadosListGanhoDispesa date){
         return service.gestaoGeral(date);
     }
- /*
+
     @GetMapping("/ano")
-    public List<Transacoes> listDispesaGanhoAno(@RequestBody DadosListGanhoDispesa date){
+    public RelatorioGestaoAno listDispesaGanhoAno(@RequestBody DadosListGanhoDispesa date){
         return service.gestaAno(date);
     }
 
-
-
-    @GetMapping("/month")
-    public List<CategoryMonth> listDispesaGanhoMes(@RequestBody DadosListGanhoDispesa date){
-        return service.ManagementListMonth(dataManagementList);
-    }
-
-     */
 
 
 }
