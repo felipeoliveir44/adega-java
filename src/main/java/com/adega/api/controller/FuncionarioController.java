@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -23,12 +24,13 @@ public class FuncionarioController {
     @Transactional
     public ResponseEntity<DadosCadastrarFuncionario> cadastrar(@RequestBody @Valid DadosCadastrarFuncionario dados) {
         service.cadastrar(dados);
-        return ResponseEntity.ok().body(dados);
+        return ResponseEntity.status(HttpStatus.CREATED).body(dados);
     }
 
     @GetMapping("/listar")
-    public Page<DadosListagemFuncionario> listarClientes(@PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao) {
-        return service.listarClientes(paginacao);
+    public ResponseEntity<Page<DadosListagemFuncionario>> listarClientes(@PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao) {
+        var page = service.listarClientes(paginacao);
+        return ResponseEntity.ok(page);
     }
 
     @PutMapping("/atualizar")
@@ -40,14 +42,14 @@ public class FuncionarioController {
 
     @DeleteMapping("/desativar/{id}")
     @Transactional
-    public ResponseEntity<Long> excluirCliente(@PathVariable Long id) {
+    public ResponseEntity excluirCliente(@PathVariable Long id) {
         service.desativarFuncionario(id);
-        return ResponseEntity.ok(id);
+        return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/ativar/{id}")
     @Transactional
-    public ResponseEntity<Long> ativarCliente(@PathVariable Long id) {
+    public ResponseEntity ativarCliente(@PathVariable Long id) {
         service.ativarFuncionario(id);
         return ResponseEntity.ok(id);
     }

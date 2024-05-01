@@ -20,10 +20,9 @@ public class FuncionarioService {
     @Autowired
     private FuncionarioRepository repository;
 
-    public ResponseEntity<DadosCadastrarFuncionario> cadastrar(DadosCadastrarFuncionario dados) {
+    public void cadastrar(DadosCadastrarFuncionario dados) {
         var funcionario = new Funcionario(dados);
         repository.save(funcionario);
-        return ResponseEntity.ok().body(dados);
     }
 
     public Page<DadosListagemFuncionario> listarClientes(Pageable paginacao) {

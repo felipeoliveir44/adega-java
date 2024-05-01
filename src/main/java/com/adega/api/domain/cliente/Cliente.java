@@ -35,9 +35,6 @@ public class Cliente {
         this.telefone = cliente.telefone();
     }
 
-
-
-
     public void atualizar(DadosAtualizarCliente atualizarCliente) {
         if(atualizarCliente.name() != null||atualizarCliente.name().length()>1){
             this.nome = atualizarCliente.name();

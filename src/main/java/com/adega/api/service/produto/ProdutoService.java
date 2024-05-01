@@ -15,6 +15,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -85,6 +87,17 @@ public class ProdutoService {
         } else {
             System.out.println("Produto não encontrado com o ID especificado.");
         }
+    }
+
+    public List<String> descontoEspecial() {
+        List<String> produtos = new ArrayList<>();
+        // Adiciona 3 produtos aleatórios à lista
+        for (int i = 0; i < 3; i++) {
+            var produto = produtoRepository.retornarItemAleatorio().toString();
+            produtos.add(produto);
+            
+        }
+        return produtos;
     }
 
 }

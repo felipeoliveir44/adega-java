@@ -15,6 +15,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @EqualsAndHashCode(of = "id")
+@ToString
 public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
