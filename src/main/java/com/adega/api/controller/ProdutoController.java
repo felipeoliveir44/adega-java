@@ -29,6 +29,8 @@ public class ProdutoController {
 
     @GetMapping("/listar")
     public Page<DadosListProduto> listProdutos(@PageableDefault(size = 10,sort = {"preco"}) Pageable pageable, @RequestBody DadosListProduto dados){
+        var produtos = produtoService.retornarItemsComDesconto();
+        System.out.println(produtos);
         return produtoService.listProduto(pageable,dados);
     }
 
