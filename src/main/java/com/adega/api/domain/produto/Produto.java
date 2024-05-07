@@ -28,19 +28,21 @@ public class Produto {
     private BigDecimal preco;
     @ManyToOne
     @JoinColumn(name = "id_categoria")
-    private Categoria idCatagoria;
+    private Categoria id_categoria;
 
     public Produto(DadosCadastroProduto dadosCadastroProduto, Categoria categoria) {
         this.nome = dadosCadastroProduto.nome();
         this.quantidade = dadosCadastroProduto.quantidade();
         this.preco = dadosCadastroProduto.preco();
-        this.idCatagoria = categoria;
+        this.id_categoria = categoria;
     }
+
+
 
     public void atualizar(DadosAtualizarProduto atualizarProduto,Categoria categoria) {
 
         if(atualizarProduto.idCategoria() != null){
-            this.idCatagoria = categoria;
+            this.id_categoria = categoria;
 
         }
         if(atualizarProduto.preco() != null){

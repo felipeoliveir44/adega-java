@@ -6,16 +6,15 @@ import com.adega.api.domain.produto.Produto;
 import com.adega.api.domain.produto.dto.DadosAtualizarProduto;
 import com.adega.api.domain.produto.dto.DadosCadastroProduto;
 import com.adega.api.domain.produto.dto.DadosListProduto;
+import com.adega.api.domain.produto.dto.DadosListagemProdutosAleatorios;
 import com.adega.api.repository.CategoriaRepository;
 import com.adega.api.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -89,15 +88,11 @@ public class ProdutoService {
         }
     }
 
-    public List<String> descontoEspecial() {
-        List<String> produtos = new ArrayList<>();
-        // Adiciona 3 produtos aleatórios à lista
-        for (int i = 0; i < 3; i++) {
-            var produto = produtoRepository.retornarItemAleatorio().toString();
-            produtos.add(produto);
-            
-        }
+    public List<DadosListagemProdutosAleatorios> retornarItemsComDesconto() {
+        List<DadosListagemProdutosAleatorios> produtos = produtoRepository.retornarItemAleatorio();
         return produtos;
     }
+
+
 
 }
