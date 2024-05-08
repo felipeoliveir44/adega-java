@@ -1,5 +1,6 @@
 package com.adega.api.domain.produto.dto;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -12,6 +13,7 @@ public record DadosCadastroProduto(
         Integer quantidade,
         @NotNull
         BigDecimal preco,
+        @JsonAlias("id_categoria")
         @NotNull
         Long idCategoria
 ) {

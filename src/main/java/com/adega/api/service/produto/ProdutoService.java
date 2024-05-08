@@ -6,15 +6,16 @@ import com.adega.api.domain.produto.Produto;
 import com.adega.api.domain.produto.dto.DadosAtualizarProduto;
 import com.adega.api.domain.produto.dto.DadosCadastroProduto;
 import com.adega.api.domain.produto.dto.DadosListProduto;
+import com.adega.api.domain.produto.dto.DadosListagemProdutosAleatorios;
 import com.adega.api.repository.CategoriaRepository;
 import com.adega.api.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -86,5 +87,12 @@ public class ProdutoService {
             System.out.println("Produto não encontrado com o ID especificado.");
         }
     }
+
+    public List<DadosListagemProdutosAleatorios> retornarItemsComDesconto() {
+        List<DadosListagemProdutosAleatorios> produtos = produtoRepository.retornarItemAleatorio();
+        return produtos;
+    }
+
+
 
 }

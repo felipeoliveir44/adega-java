@@ -29,17 +29,14 @@ public class PedidoService {
     private ProdutoService produtoService;
     @Autowired
     private ClienteService clienteService;
-    public ResponseEntity realizarPedido(DadosRealizarPedido dados) {
+    public void realizarPedido(DadosRealizarPedido dados) {
         var criarCliente = clienteService.cadastrarCliente(dados);
         System.out.println(criarCliente);
         var produto = produtoRepository.getReferenceById(dados.idProduto());
         var pedido = new Pedido(criarCliente, produto, dados.quantidade(), dados.precoProduto(), dados.valorTotal());
         produtoService.retirarQuantidadeProduto(dados);
         pedidoRepository.save(pedido);
-        return ResponseEntity.ok().body(pedido);
     }
-
-
 
 
 }

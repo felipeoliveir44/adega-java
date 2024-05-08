@@ -49,3 +49,5 @@ create table tbpedido(
     foreign key (id_cliente) references tbcliente(id),
     foreign key (id_produto) references tbproduto(id)
 );
+
+
