@@ -1,8 +1,7 @@
 package com.adega.api.domain.funcionario.dto;
 
-import com.adega.api.domain.funcionario.Role;
+import com.adega.api.domain.user.Role;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.br.CPF;
 import org.springframework.format.annotation.DateTimeFormat;
 

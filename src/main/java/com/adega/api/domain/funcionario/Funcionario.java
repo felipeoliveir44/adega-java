@@ -2,10 +2,12 @@ package com.adega.api.domain.funcionario;
 
 import com.adega.api.domain.funcionario.dto.DadosAtualizarFuncionario;
 import com.adega.api.domain.funcionario.dto.DadosCadastrarFuncionario;
+import com.adega.api.domain.user.Role;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+
 @Entity
 @Table(name = "tbfuncionario")
 @NoArgsConstructor
@@ -13,7 +15,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @EqualsAndHashCode(of = "id")
-public class Funcionario {
+public class Funcionario{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,8 +23,6 @@ public class Funcionario {
     private String nome;
     @Column(name = "email")
     private String email;
-    @Column(name = "senha")
-    private String senha;
     @Column(name = "telefone")
     private String telefone;
     @Column(name = "rg")
@@ -42,7 +42,6 @@ public class Funcionario {
     public Funcionario(DadosCadastrarFuncionario dados) {
         this.nome = dados.nome();
         this.email = dados.email();
-        this.senha = dados.senha();
         this.telefone = dados.telefone();
         this.rg = dados.rg();
         this.cpf = dados.cpf();
@@ -51,6 +50,20 @@ public class Funcionario {
         this.role = dados.role();
         this.status = true;
     }
+
+    public Funcionario(DadosCadastrarFuncionario dados, String senhaCriptografada, Role role) {
+        this.nome = dados.nome();
+        this.email = dados.email();
+        this.telefone = dados.telefone();
+        this.rg = dados.rg();
+        this.cpf = dados.cpf();
+        this.dataContratacao = dados.dataContratacao();
+        this.dataNascimento = dados.dataNascimento();
+        this.role = dados.role();
+        this.status = true;
+    }
+
+
     public void desativaFuncionario(){
         this.status = false;
     }
@@ -62,9 +75,6 @@ public class Funcionario {
         if (dados.email() != null) {
             this.email = dados.email();
         }
-        if (dados.senha() != null) {
-            this.senha = dados.senha();
-        }
         if (dados.telefone() != null) {
             this.telefone = dados.telefone();
         }
@@ -73,4 +83,5 @@ public class Funcionario {
     public void ativarFuncionario() {
         this.status = true;
     }
+
 }
