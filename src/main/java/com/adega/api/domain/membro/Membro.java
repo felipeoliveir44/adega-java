@@ -1,11 +1,16 @@
 package com.adega.api.domain.membro;
 
 import com.adega.api.domain.membro.dto.DadosCadastroMembro;
+import com.adega.api.domain.user.Role;
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.cglib.core.Local;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDate;
+import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Table(name = "tbmembro")
@@ -14,7 +19,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @EqualsAndHashCode(of = "id")
-public class Membro {
+public class Membro{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,8 +27,6 @@ public class Membro {
     private String nome;
     @Column(name = "email")
     private String email;
-    @Column(name = "senha")
-    private String senha;
     @Column(name = "cpf")
     private String cpf;
     @Column(name = "data_contratacao")
@@ -39,14 +42,12 @@ public class Membro {
     public Membro(DadosCadastroMembro dados, EnumPlano plano) {
         this.nome = dados.nome();
         this.email = dados.email();
-        this.senha = dados.senha();
         this.cpf = dados.cpf();
         this.dataContratacao = LocalDate.now();
         this.dataRenovacao = dataRenovacao();
         this.formaPagamento = dados.formaPagamento();
         this.plano = plano;
     }
-
 
     public LocalDate dataRenovacao() {
         // Obter a data atual
@@ -55,4 +56,5 @@ public class Membro {
         LocalDate dataRenovacao = dataAtual.plusDays(30);
         return dataRenovacao;
     }
+
 }

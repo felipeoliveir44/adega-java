@@ -1,12 +1,11 @@
 package com.adega.api.domain.membro.dto;
 
 import com.adega.api.domain.membro.EnumPlano;
+import com.adega.api.domain.user.Role;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.br.CPF;
-
-import java.time.LocalDate;
 
 public record DadosCadastroMembro(
         @NotBlank
@@ -20,7 +19,8 @@ public record DadosCadastroMembro(
         @NotBlank
         String formaPagamento,
         @NotNull
-        EnumPlano plano
+        EnumPlano plano,
+        Role role
 
 ) {
 

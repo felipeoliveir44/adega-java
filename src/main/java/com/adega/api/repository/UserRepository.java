@@ -1,8 +1,10 @@
 package com.adega.api.repository;
 
-import com.adega.api.domain.membro.Membro;
+import com.adega.api.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 
-public interface MembroRepository extends JpaRepository<Membro, Long> {
+public interface UserRepository extends JpaRepository<User, Long> {
+
+    UserDetails findByLogin(String login);
 }
