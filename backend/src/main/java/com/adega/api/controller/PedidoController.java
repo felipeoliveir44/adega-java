@@ -22,5 +22,4 @@ public class PedidoController {
         service.realizarPedido(pedido);
         return ResponseEntity.status(HttpStatus.CREATED).body(pedido);
     }
-    
 }
