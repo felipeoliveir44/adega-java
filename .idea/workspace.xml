@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="006ff8d3-6512-4cde-99de-06232aef3441" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/ApiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/controller/CategoriaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/controller/ClienteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/controller/FornecedorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/controller/FuncionarioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/controller/GestaoFinancasController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/controller/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/controller/MembroController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/controller/PedidoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/controller/ProdutoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/categoria/Categoria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/categoria/dto/DadosCategoria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/categoria/dto/DadosListaCategoria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/categoria/dto/NameCategoria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/cliente/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/cliente/dto/DadosAtualizarCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/cliente/dto/DadosCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/cliente/dto/DadosListCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/fornecedor/Fornecedor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/fornecedor/dto/DadosFornecedorAtualizar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/fornecedor/dto/DadosFornecedorCadastro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/fornecedor/dto/DadosList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/fornecedor/dto/DadosListFornecedor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/funcionario/Funcionario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/funcionario/dto/DadosAtualizarFuncionario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/funcionario/dto/DadosCadastrarFuncionario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/funcionario/dto/DadosListagemFuncionario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/gestao/GestaoFinancas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/gestao/dto/CategoriaFinacas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/gestao/dto/DadosGestao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/gestao/dto/DadosGestaoFinancas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/gestao/dto/DadosListGanhoDispesa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/gestao/dto/DadosTransacoes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/gestao/dto/Despesa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/gestao/dto/Receita.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/gestao/dto/RelatorioGestao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/gestao/dto/RelatorioGestaoAno.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/gestao/dto/Transacoes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/membro/EnumPlano.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/membro/Membro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/membro/dto/DadosCadastroMembro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/membro/dto/DadosListagemMembro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/pedido/Pedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/pedido/dto/DadosRealizarPedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/produto/Produto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/produto/dto/DadosAtualizarProduto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/produto/dto/DadosCadastroProduto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/produto/dto/DadosListProduto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/produto/dto/DadosListagemProdutosAleatorios.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/user/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/user/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/user/dto/AutenticarUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/user/dto/DadosCadastroUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/domain/user/dto/LoginResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/infra/exceptions/Errors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/infra/security/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/infra/security/SecurityFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/infra/security/TokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/repository/CategoriaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/repository/ClienteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/repository/FornecedorRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/repository/FuncionarioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/repository/GestaoFinaceiraRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/repository/MembroRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/repository/PedidoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/repository/ProdutoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/service/authorization/AuthorizationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/service/categoria/CategoriaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/service/cliente/ClienteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/service/fornecedor/FornecedorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/service/funcionario/FuncionarioService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/service/gestao/AjusteDetempo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/service/gestao/GestaoFinancasService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/service/membro/MembroService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/service/pedido/PedidoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adega/api/service/produto/ProdutoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/adega/api/ApiApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2fBvWFvJEa04gQz6M4CwryuePfG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ApiApplication.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "develop",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/programacao/adega-java/backend",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "promo.kubernetes"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.adega.api.domain.user.dto" />
+      <recent name="com.adega.api.domain.role" />
+      <recent name="com.adega.api.domain.fornecedor.dto" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adega.api.ApiApplication" />
+      <module name="api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.adega.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ApiApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="006ff8d3-6512-4cde-99de-06232aef3441" name="Changes" comment="" />
+      <created>1713287316121</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713287316121</updated>
+    </task>
+    <servers />
+  </component>
+</project>
